@@ -1,0 +1,268 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source "../**/*.blade.php";
+@source "../**/*.js";
+@source "../**/*.vue";
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+body{
+    background: grey;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    padding-bottom: 30px;
+}
+
+main{
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+header h1{
+    font-size: 60px;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.vending-machines{
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.vending-machines .wrap .vending .prod-wrap{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 10px;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.vending-machines .wrap .vending .prod-wrap li{
+    text-align: left;
+}
+
+h2{
+    font-size: 40px;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.wrap{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.vending-machines .wrap .vending{
+    width: 300px;
+    height: 300px;
+    border-radius: 30px;
+    background: rgb(122, 122, 122);
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 0 20px 5px rgb(48, 45, 45);
+}
+
+.products .wrap .product{
+    width: 300px;
+    height: 300px;
+    border-radius: 30px;
+    background: lightskyblue;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 0 20px 5px rgb(48, 45, 45);
+}
+
+.h2-btn{
+    display: block;
+    max-width: 500px;
+    font-size: 40px;
+    text-align: center;
+    margin: 30px auto;
+    border-radius: 30px;
+    border: 2px solid white;
+    background: rgb(44, 44, 44);
+    padding: 20px;
+    box-shadow: 0 0 20px 5px rgb(48, 45, 45);
+    cursor: pointer;
+}
+
+.supplies .wrap .product{
+    width: 300px;
+    height: 300px;
+    border-radius: 30px;
+    background: lightgreen;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 0 20px 10px rgb(48, 45, 45);
+}
+
+.auth-section form{
+    max-width: 400px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.auth-section form input{
+    width: 100%;
+    display: block;
+    background: transparent;
+    outline: 1px solid white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    border: 0;
+}
+
+.auth-section form button{
+    margin: 0 auto;
+    display: block;
+    background: darkgray;
+    outline: 1px solid white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    border: 0;
+}
+
+.description{
+    font-size: 20px;
+    margin: 30px 0 35px;
+}
+
+.nums{
+    padding: 10px 0;
+}
+
+.buttons{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px 0;
+}
+
+.buttons .button{
+    display: block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: rgb(43, 38, 38);
+    color: white;
+    outline: none;
+    border: none;
+    min-width: 100px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.pop-form-wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-form{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 400px;
+    width: 100%;
+    background: rgb(56, 56, 56);
+    border-radius: 20px;
+    padding: 20px;
+    position: relative;
+}
+
+.edit-form input{
+    border-radius: 10px;
+    border: 1px solid white;
+    background: transparent;
+    padding: 20px;
+}
+
+.edit-form button{
+    display: block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: rgb(43, 38, 38);
+    color: white;
+    outline: none;
+    border: none;
+}
+
+.hide-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 50%;
+    border: 1px solid white;
+    position: absolute;
+    right: -30px;
+    top: -30px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.hide-form div{
+    width: 30px;
+    height: 2px;
+    background: white;
+    position: absolute;
+    transform: rotate(-45deg);
+}
+
+.hide-form div:last-child{
+    transform: rotate(45deg);
+}
+
+.titles,.product-block{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.titles .title{
+    font-weight: 600;
+    border-left: 1px solid white;
+    padding: 5px 20px;
+    text-align: center;
+    background: rgb(112, 112, 112);
+}
+
+.titles .title:last-child{
+    border-right: 1px solid white;
+}
+
+.product-block .cell{
+    border-left: 1px solid white;
+    padding: 5px 20px;
+    background: rgb(112, 112, 112);
+}
+
+.product-block .cell:last-child{
+    border-right: 1px solid white;
+}

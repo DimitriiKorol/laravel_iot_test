@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
+import path from 'path';
 
 export default defineConfig({
     plugins: [
@@ -11,4 +12,17 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    server: {
+        host: "0.0.0.0",
+        port: 5173,
+        hmr: {
+            host: 'localhost', // or your Docker host IP
+        },
+    },
+    resolve: {
+        alias: {
+            '~bootstrap': path.resolve(__dirname, 'node_modules/bootstrap'),
+            '@': path.resolve(__dirname, './resources/sass'),
+        },
+    },
 });

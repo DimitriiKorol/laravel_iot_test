@@ -6,8 +6,7 @@ WORKDIR /var/www/html
 COPY package*.json ./
 RUN npm ci
 
-# Копируем исходный код
-COPY . .
+#Project files copied in php-fpm stage
 
 # Открываем порт для Vite
 EXPOSE 3000
